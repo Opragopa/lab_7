@@ -64,11 +64,11 @@ std::istream& operator>>(std::istream& is, Product& payment)
     return is;
 }
 
-std::ostream& operator<<(std::ostream& os, const Product& payment) // TODO : исп. вывод на экран
+std::ostream& operator<<(std::ostream& os, const Product& payment)
 {
-    os  /*<< "productCost_: "*/ << payment.productCost_ << '\t'
-        /*<< " marketName_: "*/ << payment.marketName_ << '\t'
-        /*<< " productName_: "*/ << payment.productName_;
+    os   << payment.productCost_ << '\t'
+         << payment.marketName_ << '\t'
+         << payment.productName_;
     return os;
 }
 
@@ -111,9 +111,3 @@ size_t Product::getMarketNameLength()
 {
     return this->marketName_.length();
 }
-
-//size_t Product::getProductCostLength()
-//{
-//    size_t test = productCost_.size();
-//    return 0;
-//}
